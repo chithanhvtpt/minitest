@@ -44,21 +44,21 @@ create table `bills`(
 );
 
 insert into `tours`(code, category, price, startDate, finishDate) values
-('101', 'du lich tham quan', '1000000', '2022/01/12', '2021/01/15'),
-('102', 'du lich van hoa', '2000000', '2020/02/14', '2021/02/15'),
-('103', 'du lich quoc te', '3000000', '2020/03/16', '2021/01/13'),
-('104', 'du lich the thao', '4000000', '2020/04/15', '2021/01/13'),
-('105', 'du lich tham quan', '5000000', '2020/08/22', '2021/01/13'),
-('106', 'du lich van hoa', '6000000', '2020/06/12', '2021/01/13'),
-('107', 'du lich gia dinh', '7000000', '2020/04/30', '2021/01/13'),
-('108', 'du lich ca nhan', '8000000', '2020/02/12', '2021/01/13'),
-('109', 'du lich noi dia', '9000000', '2020/03/20', '2021/01/13'),
-('110', 'du lich tham quan', '4000000', '2020/08/12', '2021/01/13'),
-('111', 'du lich van hoa', '5000000', '2020/07/29', '2021/01/13'),
-('112', 'du lich quoc te', '6000000', '2020/09/20', '2021/01/13'),
-('113', 'du lich gia dinh', '10000000', '2020/04/26', '2021/01/13'),
-('114', 'du lich nui', '4000000', '2020/11/14', '2021/01/13'),
-('115', 'du lich bien', '3000000', '2020/12/15', '2021/01/13');
+('101', 'du lich tham quan', '1000000', '2022/01/12', '2020/01/15'),
+('102', 'du lich van hoa', '2000000', '2020/02/14', '2020/02/15'),
+('103', 'du lich quoc te', '3000000', '2020/03/16', '2020/01/13'),
+('104', 'du lich the thao', '4000000', '2020/04/15', '2020/01/13'),
+('105', 'du lich tham quan', '5000000', '2020/08/22', '2020/01/13'),
+('106', 'du lich van hoa', '6000000', '2020/06/12', '2020/01/13'),
+('107', 'du lich gia dinh', '7000000', '2020/04/30', '2020/01/13'),
+('108', 'du lich ca nhan', '8000000', '2020/02/12', '2020/01/13'),
+('109', 'du lich noi dia', '9000000', '2020/03/20', '2020/01/13'),
+('110', 'du lich tham quan', '4000000', '2020/08/12', '2020/01/13'),
+('111', 'du lich van hoa', '5000000', '2020/07/29', '2020/01/13'),
+('112', 'du lich quoc te', '6000000', '2020/09/20', '2020/01/13'),
+('113', 'du lich gia dinh', '10000000', '2020/04/26', '2020/01/13'),
+('114', 'du lich nui', '4000000', '2020/11/14', '2020/01/13'),
+('115', 'du lich bien', '3000000', '2020/12/15', '2020/01/13');
 
 insert into `destinations`(name, description, price, city_id) values
 ('Nha Trang', 'Bien dep', '1000000', '1'),
@@ -100,4 +100,16 @@ insert into `bills`(tour_id, tourist_id, status) values
 ('9', '4', 'Da Dat'),
 ('10', '5', 'Da Dat');
 
-select count(startDate) from `tours` startDate = 2021-03;
+select count(startDate)
+from `tours`
+where `startDate` between '2020/03/01' and '2020/03/31';
+
+select count(finishDate)
+from `tours`
+where `finishDate` between '2020/04/01' and '2020/04/31'
+
+
+
+
+
+
