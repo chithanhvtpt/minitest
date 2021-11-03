@@ -100,4 +100,4 @@ insert into `bills`(tour_id, tourist_id, status) values
 ('9', '4', 'Da Dat'),
 ('10', '5', 'Da Dat');
 
-select count(startDate) from `tours` WHERE  = 2021-03-01;
+select count(startDate) from `tours` startDate = 2021-03;
